@@ -172,34 +172,26 @@ else:
         if len(top_professions) > 1:
             st.success(f"Anda cocok untuk beberapa profesi! Anda memiliki potensi kuat sebagai: **{', '.join(top_professions)}**.")
             st.write("Berikut adalah deskripsi singkatnya:")
-            # Tampilkan gambar dan deskripsi untuk setiap profesi yang cocok
+            # Ganti URL dengan path lokal:
             if 'Programmer' in top_professions:
-                st.image("https://cdn-icons-png.flaticon.com/512/3673/3673503.png", width=100) # Icon programmer
+                st.image("assets/programmer.png", width=100) # <--- UBAH DI SINI
                 st.write("**Programmer:** Jika Anda suka memecahkan masalah dengan kode, membangun aplikasi, dan menciptakan sesuatu dari nol.")
             if 'Designer' in top_professions:
-                st.image("https://cdn-icons-png.flaticon.com/512/2855/2855635.png", width=100) # Icon designer
+                st.image("assets/designer.png", width=100) # <--- UBAH DI SINI
                 st.write("**Designer:** Jika Anda memiliki mata untuk estetika, suka membuat antarmuka yang indah dan intuitif, serta memahami pengalaman pengguna.")
             if 'Data Scientist' in top_professions:
-                st.image("https://cdn-icons-png.flaticon.com/512/2920/2920790.png", width=100) # Icon data scientist
+                st.image("assets/data_scientist.png", width=100) # <--- UBAH DI SINI
                 st.write("**Data Scientist:** Jika Anda tertarik menganalisis data, menemukan pola tersembunyi, dan menggunakan statistik untuk membuat keputusan.")
         else:
-            # Jika hanya ada satu profesi yang paling cocok
-            result_profession = top_professions[0]
-            st.success(f"Berdasarkan jawaban Anda, profesi yang paling cocok untuk Anda adalah: **{result_profession}!**")
-
-            # Tampilkan gambar dan deskripsi berdasarkan hasil profesi tunggal
+           # ... kode sebelumnya untuk hasil profesi tunggal ...
             if result_profession == "Programmer":
-                # Jika Anda punya gambar lokal di folder 'assets', gunakan ini:
-                # st.image("assets/programmer.png", width=150)
-                st.image("https://cdn-icons-png.flaticon.com/512/3673/3673503.png", width=100)
+                st.image("assets/programmer.png", width=100) # <--- UBAH DI SINI
                 st.write("Anda memiliki jiwa **Programmer**! Anda suka memecahkan masalah dengan kode, membangun aplikasi, dan menciptakan sesuatu dari nol. Dunia koding dan logika adalah playground Anda.")
             elif result_profession == "Designer":
-                # st.image("assets/designer.png", width=150)
-                st.image("https://cdn-icons-png.flaticon.com/512/2855/2855635.png", width=100)
+                st.image("assets/designer.png", width=100) # <--- UBAH DI SINI
                 st.write("Anda memiliki jiwa **Designer**! Anda memiliki mata untuk estetika, suka membuat antarmuka yang indah dan intuitif, serta memahami pengalaman pengguna. Kreativitas adalah kunci Anda.")
             elif result_profession == "Data Scientist":
-                # st.image("assets/data_scientist.png", width=150)
-                st.image("https://cdn-icons-png.flaticon.com/512/2920/2920790.png", width=100)
+                st.image("assets/data_scientist.png", width=100) # <--- UBAH DI SINI
                 st.write("Anda memiliki jiwa **Data Scientist**! Anda tertarik menganalisis data, menemukan pola tersembunyi, dan menggunakan statistik untuk membuat keputusan. Data adalah bahasa Anda.")
 
     st.write("---")
